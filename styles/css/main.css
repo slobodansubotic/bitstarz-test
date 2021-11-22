@@ -182,11 +182,6 @@
   background-position: center;
   background-size: cover;
 }
-@media only screen and (max-width: 799px) {
-  .hero {
-    height: 56rem;
-  }
-}
 @media only screen and (max-width: 479px) {
   .hero {
     height: 48rem;
@@ -199,11 +194,6 @@
 @media only screen and (max-width: 1379px) {
   .hero__content {
     margin: 18.5rem 5rem;
-  }
-}
-@media only screen and (max-width: 799px) {
-  .hero__content {
-    margin: 14rem 5rem;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -254,7 +244,7 @@
     line-height: 6rem;
   }
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 479px) {
   .hero-content__title {
     font-size: 3rem;
     line-height: 4rem;
@@ -285,6 +275,12 @@
   transform: translateY(2rem);
   opacity: 0;
   animation: textInBottom 500ms cubic-bezier(0.51, 0.42, 0.44, 1.71) 900ms forwards;
+}
+.hero-content__buttons.no-gap {
+  margin-left: -1rem;
+}
+.hero-content__buttons.no-gap .button {
+  margin: 1rem;
 }
 
 @keyframes cardFlip {
@@ -366,6 +362,22 @@
     margin: 0 2rem 2rem;
   }
 }
+.programs__group.no-gap {
+  margin: 0 13rem 2rem;
+}
+.programs__group.no-gap .programs__card {
+  margin: 2rem;
+}
+@media only screen and (max-width: 1379px) {
+  .programs__group.no-gap {
+    margin: 0 3rem 2rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .programs__group.no-gap {
+    margin: 0 0 2rem;
+  }
+}
 
 .programs__card {
   position: relative;
@@ -402,7 +414,7 @@
   position: relative;
   width: 42rem;
   height: 50rem;
-  border-radius: 1.6rem 1.6rem 9rem 1.6rem;
+  border-radius: 1.6rem 1.6rem 8.8rem 1.6rem;
   transform-style: preserve-3d;
   box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.25);
 }
@@ -410,12 +422,14 @@
   .programs-card__inner {
     width: 32rem;
     height: 38rem;
+    border-radius: 1.6rem 1.6rem 6.8rem 1.6rem;
   }
 }
 @media only screen and (max-width: 479px) {
   .programs-card__inner {
     width: 28rem;
     height: 33rem;
+    border-radius: 1.6rem 1.6rem 5.6rem 1.6rem;
   }
 }
 .programs-card__inner.flipped {
@@ -450,6 +464,7 @@
 
 .programs-card__inner--front {
   border-radius: 1.6rem 1.6rem 0 1.6rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   overflow: hidden;
 }
@@ -501,6 +516,7 @@
 
 .programs-card__inner--back {
   border-radius: 1.6rem 1.6rem 1.6rem 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   padding: 3rem;
   background-color: #fff;
@@ -602,14 +618,14 @@
   }
 }
 .programs__testimonial.animate {
-  animation: enterFromTop 800ms cubic-bezier(0.51, 0.42, 0.44, 1.71) forwards;
+  animation: enterFromTop 500ms cubic-bezier(0.51, 0.42, 0.44, 1.71) forwards;
 }
 
 .programs__user {
   opacity: 0;
 }
 .programs__user.animate {
-  animation: fadeIn 500ms ease-in 800ms forwards;
+  animation: fadeIn 500ms ease-in 500ms forwards;
 }
 
 .programs__user-photo {

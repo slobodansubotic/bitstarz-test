@@ -78,6 +78,22 @@
     gap: 3rem;
     margin: 0 2rem 2rem;
   }
+
+  &.no-gap {
+    margin: 0 13rem 2rem;
+
+    .programs__card {
+      margin: 2rem;
+    }
+
+    @include media-max($max138) {
+      margin: 0 3rem 2rem;
+    }
+  
+    @include media-max($max48) {
+      margin: 0 0 2rem;
+    }
+  }
 }
 
 .programs__card {
@@ -118,18 +134,20 @@
   position: relative;
   width: 42rem;
   height: 50rem;
-  border-radius: 1.6rem 1.6rem 9rem 1.6rem;
+  border-radius: 1.6rem 1.6rem 8.8rem 1.6rem;
   transform-style: preserve-3d;
   box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.25);
 
   @include media-max($max168) {
     width: 32rem;
     height: 38rem;
+    border-radius: 1.6rem 1.6rem 6.8rem 1.6rem;
   }
 
   @include media-max($max48) {
     width: 28rem;
     height: 33rem;
+    border-radius: 1.6rem 1.6rem 5.6rem 1.6rem;
   }
 
   &.flipped {
@@ -162,6 +180,7 @@
 
 .programs-card__inner--front {
   border-radius: 1.6rem 1.6rem 0 1.6rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   overflow: hidden;
 }
@@ -208,6 +227,7 @@
 
 .programs-card__inner--back {
   border-radius: 1.6rem 1.6rem 1.6rem 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   padding: 3rem;
   background-color: $white;
@@ -299,7 +319,7 @@
   }
 
   &.animate {
-    animation: enterFromTop 800ms $bounce forwards;
+    animation: enterFromTop 500ms $bounce forwards;
   }
 }
 
@@ -307,7 +327,7 @@
   opacity: 0;
 
   &.animate {
-    animation: fadeIn 500ms ease-in 800ms forwards;
+    animation: fadeIn 500ms ease-in 500ms forwards;
   }
 }
 

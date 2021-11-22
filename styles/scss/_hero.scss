@@ -28,10 +28,6 @@
   background-position: center;
   background-size: cover;
 
-  @include media-max($max80) {
-    height: 56rem;
-  }
-
   @include media-max($max48) {
     height: 48rem;
   }
@@ -42,10 +38,6 @@
 
   @include media-max($max138) {
     margin: 18.5rem 5rem;
-  }
-
-  @include media-max($max80) {
-    margin: 14rem 5rem;
   }
 
   @include media-max($max48) {
@@ -97,6 +89,13 @@
       transform: translateY(2rem);
       opacity: 0;
       animation: textInBottom 500ms $bounce 900ms forwards;
+    }
+  }
+
+  &.no-gap {
+    margin-left: -1rem;
+    .button {
+      margin: 1rem;
     }
   }
 }
