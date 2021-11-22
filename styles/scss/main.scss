@@ -1,0 +1,76 @@
+@import "../scss/variables", "../scss/mixins", "../scss/base.scss", '../scss/shared', "../scss/layout", "../scss/hero", '../scss/cards';
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(90deg) rotateZ(10deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+}
+
+@keyframes cardUnFlip {
+  0% {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(10deg) rotateY(90deg) rotateZ(10deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+  width: 42rem;
+  height: 50rem;
+  border-radius: 1.6rem 1.6rem 0 1.6rem;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+  background-color: pink;
+
+  &:hover {
+    animation: cardFlip 500ms forwards;
+  }
+}
+
+@each $number in (1, 2, 3) {
+  .playlists__cover-#{$number} {
+    position: relative;
+    width: 42rem;
+    height: 25rem;
+
+    .clipped,
+    .animated {
+      width: 42rem;
+      height: 25rem;
+      background-image: url("../../assets/images/playlist-cover-#{$number}.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .clipped {
+      clip-path: path(
+        "M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z"
+      );
+    }
+
+    .animated {
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: inset(3rem round 6rem);
+      transition: clip-path 150ms ease-in-out;
+
+      &:hover {
+        clip-path: inset(0 round 3rem);
+      }
+    }
+  }
+}
