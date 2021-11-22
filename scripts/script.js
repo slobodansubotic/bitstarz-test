@@ -1,6 +1,6 @@
-const infoButtons = [...document.querySelectorAll(".cards-card__info")];
-const closeButtons = [...document.querySelectorAll(".cards-card__close")];
-const cardInnerElements = [...document.querySelectorAll(".cards-card__inner")];
+const infoButtons = [...document.querySelectorAll(".programs-card__info")];
+const closeButtons = [...document.querySelectorAll(".programs-card__close")];
+const cardInnerElements = [...document.querySelectorAll(".programs-card__inner")];
 
 infoButtons.forEach((button, index) => {
   button.onclick = () => {
@@ -30,22 +30,22 @@ const testimonialOptions = {
 
 const addAnimateToCards = (entries) => {
   if (entries[0].isIntersecting) {
-    const cards = [...document.querySelectorAll(".cards__card")];
+    const cards = [...document.querySelectorAll(".programs__card")];
     cards.forEach((card) => card.classList.add("animate"));
   }
 };
 
 const addAnimateToTestimonial = (entries) => {
   if (entries[0].isIntersecting) {
-    const testimonial = document.querySelector(".cards__testimonial");
-    const user = document.querySelector(".cards__user");
+    const testimonial = document.querySelector(".programs__testimonial");
+    const user = document.querySelector(".programs__user");
     testimonial.classList.add("animate");
     user.classList.add("animate");
   }
 };
 
-const cardsTarget = document.querySelector(".cards__card");
-const testimonialsTarget = document.querySelector(".cards__testimonial");
+const cardsTarget = document.querySelector(".programs__card");
+const testimonialsTarget = document.querySelector(".programs__testimonial");
 const cardsObserver = new IntersectionObserver(addAnimateToCards, cardsOptions);
 const testimonialObserver = new IntersectionObserver(
   addAnimateToTestimonial,

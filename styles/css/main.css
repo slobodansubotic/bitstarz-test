@@ -337,18 +337,18 @@
     opacity: 1;
   }
 }
-.cards {
+.programs {
   height: 104.2rem;
   padding-bottom: 6rem;
   background: linear-gradient(102.68deg, #112ec5 -0.28%, #d92057 126.51%);
 }
 @media only screen and (max-width: 1179px) {
-  .cards {
+  .programs {
     height: auto;
   }
 }
 
-.cards__group {
+.programs__group {
   display: flex;
   justify-content: center;
   gap: 6rem;
@@ -356,18 +356,18 @@
   margin: 0 15rem 2rem;
 }
 @media only screen and (max-width: 1379px) {
-  .cards__group {
+  .programs__group {
     margin: 0 5rem 2rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards__group {
+  .programs__group {
     gap: 3rem;
     margin: 0 2rem 2rem;
   }
 }
 
-.cards__card {
+.programs__card {
   position: relative;
   background-color: transparent;
   width: 42rem;
@@ -377,28 +377,28 @@
   transform: translateY(10rem);
 }
 @media only screen and (max-width: 1679px) {
-  .cards__card {
+  .programs__card {
     width: 32rem;
     height: 38rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards__card {
+  .programs__card {
     width: 28rem;
     height: 33rem;
   }
 }
-.cards__card.animate:nth-child(1) {
+.programs__card.animate:nth-child(1) {
   animation: enterFromBottom 500ms cubic-bezier(0.51, 0.42, 0.44, 1.71) forwards;
 }
-.cards__card.animate:nth-child(2) {
+.programs__card.animate:nth-child(2) {
   animation: enterFromBottom 500ms cubic-bezier(0.51, 0.42, 0.44, 1.71) 500ms forwards;
 }
-.cards__card.animate:nth-child(3) {
+.programs__card.animate:nth-child(3) {
   animation: enterFromBottom 500ms cubic-bezier(0.51, 0.42, 0.44, 1.71) 1000ms forwards;
 }
 
-.cards-card__inner {
+.programs-card__inner {
   position: relative;
   width: 42rem;
   height: 50rem;
@@ -407,26 +407,26 @@
   box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.25);
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card__inner {
+  .programs-card__inner {
     width: 32rem;
     height: 38rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards-card__inner {
+  .programs-card__inner {
     width: 28rem;
     height: 33rem;
   }
 }
-.cards-card__inner.flipped {
+.programs-card__inner.flipped {
   animation: cardFlip 300ms ease-in forwards;
 }
-.cards-card__inner.unflipped {
+.programs-card__inner.unflipped {
   animation: cardUnflip 300ms ease-in forwards;
 }
 
-.cards-card__inner--front,
-.cards-card__inner--back {
+.programs-card__inner--front,
+.programs-card__inner--back {
   position: absolute;
   width: 42rem;
   height: 50rem;
@@ -434,27 +434,27 @@
   backface-visibility: hidden;
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card__inner--front,
-.cards-card__inner--back {
+  .programs-card__inner--front,
+.programs-card__inner--back {
     width: 32rem;
     height: 38rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards-card__inner--front,
-.cards-card__inner--back {
+  .programs-card__inner--front,
+.programs-card__inner--back {
     width: 28rem;
     height: 33rem;
   }
 }
 
-.cards-card__inner--front {
+.programs-card__inner--front {
   border-radius: 1.6rem 1.6rem 0 1.6rem;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   overflow: hidden;
 }
 
-.cards-card__photo {
+.programs-card__photo {
   position: relative;
   z-index: 0;
   width: 100%;
@@ -462,11 +462,11 @@
   object-fit: cover;
   transition: transform 150ms ease-in;
 }
-.cards-card__photo:hover {
+.programs-card__photo:hover {
   transform: scale(1.2);
 }
 
-.cards-card-text__front {
+.programs-card-text__front {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -480,7 +480,7 @@
   background: linear-gradient(0deg, rgba(22, 26, 37, 0.6) 0%, rgba(22, 26, 37, 0) 50%);
   pointer-events: none;
 }
-.cards-card-text__front h2 {
+.programs-card-text__front h2 {
   margin-bottom: 0.9rem;
   font-weight: 500;
   font-size: 2.8rem;
@@ -488,25 +488,25 @@
   color: #fff;
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card-text__front h2 {
+  .programs-card-text__front h2 {
     font-size: 2.4rem;
     line-height: 3rem;
   }
 }
-.cards-card-text__front p {
+.programs-card-text__front p {
   font-size: 1.8rem;
   line-height: 2.2rem;
   color: #FFC700;
 }
 
-.cards-card__inner--back {
+.programs-card__inner--back {
   border-radius: 1.6rem 1.6rem 1.6rem 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   padding: 3rem;
   background-color: #fff;
   transform: rotateY(180deg);
 }
-.cards-card__inner--back h2 {
+.programs-card__inner--back h2 {
   margin-bottom: 2.5rem;
   font-weight: 500;
   font-size: 2.8rem;
@@ -514,57 +514,57 @@
   color: #050505;
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card__inner--back h2 {
+  .programs-card__inner--back h2 {
     font-size: 2.4rem;
     line-height: 3rem;
   }
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card__inner--back h2 {
+  .programs-card__inner--back h2 {
     margin-bottom: 1rem;
   }
 }
-.cards-card__inner--back p {
+.programs-card__inner--back p {
   font-size: 1.8rem;
   line-height: 150%;
   color: #050505;
   box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 1679px) {
-  .cards-card__inner--back p {
+  .programs-card__inner--back p {
     font-size: 1.6rem;
   }
 }
 
 @media only screen and (max-width: 1679px) {
-  .cards-card-text__back-wrapper {
+  .programs-card-text__back-wrapper {
     height: 26.6rem;
     overflow-y: auto;
     padding-right: 2rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards-card-text__back-wrapper {
+  .programs-card-text__back-wrapper {
     height: 23rem;
     overflow-y: auto;
   }
 }
 
-.cards-card-text__back--description {
+.programs-card-text__back--description {
   padding: 1.1rem 0 1.7rem;
 }
 
-.cards-card-text__back--feature {
+.programs-card-text__back--feature {
   display: flex;
   justify-content: space-between;
   padding: 1.1rem 0;
 }
-.cards-card-text__back--feature span:last-child {
+.programs-card-text__back--feature span:last-child {
   font-weight: 500;
 }
 
-.cards-card__info,
-.cards-card__close {
+.programs-card__info,
+.programs-card__close {
   position: absolute;
   z-index: 2;
   top: 2rem;
@@ -573,12 +573,12 @@
   cursor: pointer;
   transition: transform 150ms ease-in;
 }
-.cards-card__info:hover,
-.cards-card__close:hover {
+.programs-card__info:hover,
+.programs-card__close:hover {
   transform: scale(1.2);
 }
 
-.cards__testimonial {
+.programs__testimonial {
   max-width: 96rem;
   margin: 0 auto 4rem;
   font-weight: 300;
@@ -590,29 +590,29 @@
   transform: translateY(-8rem);
 }
 @media only screen and (max-width: 1179px) {
-  .cards__testimonial {
+  .programs__testimonial {
     margin: 0 5rem 4rem;
     font-size: 3rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .cards__testimonial {
+  .programs__testimonial {
     margin: 0 2rem 4rem;
     font-size: 2.4rem;
   }
 }
-.cards__testimonial.animate {
+.programs__testimonial.animate {
   animation: enterFromTop 800ms cubic-bezier(0.51, 0.42, 0.44, 1.71) forwards;
 }
 
-.cards__user {
+.programs__user {
   opacity: 0;
 }
-.cards__user.animate {
+.programs__user.animate {
   animation: fadeIn 500ms ease-in 800ms forwards;
 }
 
-.cards__user-photo {
+.programs__user-photo {
   display: block;
   width: 6.4rem;
   height: 6.4rem;
@@ -621,19 +621,19 @@
   object-fit: cover;
 }
 
-.cards__user-name,
-.cards__user-location {
+.programs__user-name,
+.programs__user-location {
   font-size: 1.6rem;
   line-height: 150%;
   text-align: center;
 }
 
-.cards__user-name {
+.programs__user-name {
   font-weight: 500;
   color: #fff;
 }
 
-.cards__user-location {
+.programs__user-location {
   color: rgba(255, 255, 255, 0.6);
 }
 

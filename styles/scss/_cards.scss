@@ -53,7 +53,7 @@
   }
 }
 
-.cards {
+.programs {
   height: 104.2rem;
   padding-bottom: 6rem;
   background: linear-gradient(102.68deg, #112ec5 -0.28%, #d92057 126.51%);
@@ -63,7 +63,7 @@
   }
 }
 
-.cards__group {
+.programs__group {
   display: flex;
   justify-content: center;
   gap: 6rem;
@@ -80,7 +80,7 @@
   }
 }
 
-.cards__card {
+.programs__card {
   position: relative;
   background-color: transparent;
   width: 42rem;
@@ -114,7 +114,7 @@
   }
 }
 
-.cards-card__inner {
+.programs-card__inner {
   position: relative;
   width: 42rem;
   height: 50rem;
@@ -141,8 +141,8 @@
   }
 }
 
-.cards-card__inner--front,
-.cards-card__inner--back {
+.programs-card__inner--front,
+.programs-card__inner--back {
   position: absolute;
   width: 42rem;
   height: 50rem;
@@ -160,13 +160,13 @@
   }
 }
 
-.cards-card__inner--front {
+.programs-card__inner--front {
   border-radius: 1.6rem 1.6rem 0 1.6rem;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 88% 100%, 0 100%);
   overflow: hidden;
 }
 
-.cards-card__photo {
+.programs-card__photo {
   position: relative;
   z-index: 0;
   width: 100%;
@@ -179,7 +179,7 @@
   }
 }
 
-.cards-card-text__front {
+.programs-card-text__front {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -206,7 +206,7 @@
   }
 }
 
-.cards-card__inner--back {
+.programs-card__inner--back {
   border-radius: 1.6rem 1.6rem 1.6rem 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 90%);
   padding: 3rem;
@@ -235,7 +235,7 @@
   }
 }
 
-.cards-card-text__back-wrapper {
+.programs-card-text__back-wrapper {
   @include media-max($max168) {
     height: 26.6rem;
     overflow-y: auto;
@@ -248,11 +248,11 @@
   }
 }
 
-.cards-card-text__back--description {
+.programs-card-text__back--description {
   padding: 1.1rem 0 1.7rem;
 }
 
-.cards-card-text__back--feature {
+.programs-card-text__back--feature {
   display: flex;
   justify-content: space-between;
   padding: 1.1rem 0;
@@ -262,8 +262,8 @@
   }
 }
 
-.cards-card__info,
-.cards-card__close {
+.programs-card__info,
+.programs-card__close {
   position: absolute;
   z-index: 2;
   top: 2rem;
@@ -277,7 +277,7 @@
   }
 }
 
-.cards__testimonial {
+.programs__testimonial {
   max-width: 96rem;
   margin: 0 auto 4rem;
   font-weight: 300;
@@ -303,7 +303,7 @@
   }
 }
 
-.cards__user {
+.programs__user {
   opacity: 0;
 
   &.animate {
@@ -311,7 +311,7 @@
   }
 }
 
-.cards__user-photo {
+.programs__user-photo {
   display: block;
   width: 6.4rem;
   height: 6.4rem;
@@ -320,18 +320,18 @@
   object-fit: cover;
 }
 
-.cards__user-name,
-.cards__user-location {
+.programs__user-name,
+.programs__user-location {
   font-size: 1.6rem;
   line-height: 150%;
   text-align: center;
 }
 
-.cards__user-name {
+.programs__user-name {
   font-weight: 500;
   color: $white;
 }
 
-.cards__user-location {
+.programs__user-location {
   color: rgba($white, 0.6);
 }
