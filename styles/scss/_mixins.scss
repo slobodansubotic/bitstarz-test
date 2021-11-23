@@ -8,43 +8,23 @@
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.9rem;
-
-  @include media-max($max118) {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
-  @include media-max($max80) {
-    font-size: 1.6rem;
-    line-height: 2rem;
-  }
 }
 
 @mixin heading-medium {
   font-weight: 500;
   font-size: 2.8rem;
   line-height: 3.4rem;
-
-  @include media-max($max168) {
-    font-size: 2.4rem;
-    line-height: 3rem;
-  }
 }
 
 @mixin heading-large {
   font-weight: 300;
   font-size: 6rem;
   line-height: 7.3rem;
+}
 
-  @include media-max($max118) {
-    font-size: 4rem;
-    line-height: 6rem;
-  }
-
-  @include media-max($max48) {
-    font-size: 3rem;
-    line-height: 4rem;
-  }
+@mixin small-text {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
 }
 
 @mixin absolute {

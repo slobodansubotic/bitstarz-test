@@ -17,13 +17,15 @@ const checkFlexGap = () => {
   return isSupported;
 };
 
-const gapSupported = checkFlexGap()
+const gapSupported = checkFlexGap();
 
 if (!gapSupported) {
-  const cards = document.querySelector(".programs__group");
+  const programs = document.querySelector(".programs__group");
   const buttonsGroup = document.querySelector(".hero-content__buttons");
-  cards.classList.add("no-gap");
+  const playlistsGroup = document.querySelector(".playlists__group");
+  programs.classList.add("no-gap");
   buttonsGroup.classList.add('no-gap')
+  playlistsGroup.classList.add("no-gap");
 }
 
 const infoButtons = [...document.querySelectorAll(".programs-card__info")];
@@ -46,9 +48,9 @@ closeButtons.forEach((button, index) => {
   };
 });
 
-const cardsOptions = {
+const programsOptions = {
   root: null,
-  rootMargin: "0px 0px -100px 0px",
+  rootMargin: "0px 0px -200px 0px",
   threshold: 0,
 };
 
@@ -60,8 +62,8 @@ const testimonialOptions = {
 
 const addAnimateToCards = (entries) => {
   if (entries[0].isIntersecting) {
-    const cards = [...document.querySelectorAll(".programs__card")];
-    cards.forEach((card) => card.classList.add("animate"));
+    const programs = [...document.querySelectorAll(".programs__card")];
+    programs.forEach((card) => card.classList.add("animate"));
   }
 };
 
@@ -74,13 +76,31 @@ const addAnimateToTestimonial = (entries) => {
   }
 };
 
-const cardsTarget = document.querySelector(".programs__card");
+const addAnimateToPlaylists = (entries) => {
+  if (entries[0].isIntersecting) {
+    const playlists = [...document.querySelectorAll(".playlists__card")];
+    const title = document.querySelector(".playlists__title");
+    playlists.forEach((card) => card.classList.add("animate"));
+    title.classList.add("animated");
+  }
+};
+
+const programsTarget = document.querySelector(".programs__group");
 const testimonialsTarget = document.querySelector(".programs__testimonial");
-const cardsObserver = new IntersectionObserver(addAnimateToCards, cardsOptions);
+const playlistsTarget = document.querySelector(".playlists__group");
+const programsObserver = new IntersectionObserver(
+  addAnimateToCards,
+  programsOptions
+);
 const testimonialObserver = new IntersectionObserver(
   addAnimateToTestimonial,
   testimonialOptions
 );
+const playlistsObserver = new IntersectionObserver(
+  addAnimateToPlaylists,
+  programsOptions
+);
 
-cardsObserver.observe(cardsTarget);
+programsObserver.observe(programsTarget);
 testimonialObserver.observe(testimonialsTarget);
+playlistsObserver.observe(playlistsTarget);

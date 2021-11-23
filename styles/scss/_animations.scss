@@ -1,0 +1,102 @@
+@keyframes pulse {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleX(1.1) scaleY(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1.1) scaleY(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes textInBottom {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textInLeft {
+  from {
+    transform: translateX(-6rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(5deg) rotateY(90deg) rotateZ(5deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+}
+
+@keyframes cardUnflip {
+  0% {
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(5deg) rotateY(90deg) rotateZ(5deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes enterFromBottom {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10rem);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromBottomRegular {
+  from {
+    transform: translateY(20rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromTop {
+  from {
+    transform: translateY(-8rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

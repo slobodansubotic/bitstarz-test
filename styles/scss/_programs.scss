@@ -1,65 +1,14 @@
-@keyframes cardFlip {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  50% {
-    transform: rotateX(5deg) rotateY(90deg) rotateZ(5deg);
-  }
-  100% {
-    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  }
-}
-
-@keyframes cardUnflip {
-  0% {
-    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-  }
-  50% {
-    transform: rotateX(5deg) rotateY(90deg) rotateZ(5deg);
-  }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-}
-
-@keyframes enterFromBottom {
-  from {
-    transform: translateY(10rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(-10rem);
-    opacity: 1;
-  }
-}
-
-@keyframes enterFromTop {
-  from {
-    transform: translateY(-8rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .programs {
   height: 104.2rem;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   background: linear-gradient(102.68deg, #112ec5 -0.28%, #d92057 126.51%);
 
-  @include media-max($max118) {
+  @include media-max($max168) {
     height: auto;
+  }
+
+  @include media-max($max118) {
+    padding-bottom: 6rem;
   }
 }
 
@@ -216,11 +165,14 @@
     margin-bottom: 0.9rem;
     @include heading-medium;
     color: $white;
+
+    @include media-max($max48) {
+      font-size: 2.4rem;
+    }
   }
 
   p {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    @include small-text;
     color: $highlight;
   }
 }
@@ -240,6 +192,10 @@
 
     @include media-max($max168) {
       margin-bottom: 1rem;
+    }
+
+    @include media-max($max48) {
+      font-size: 2.4rem;
     }
   }
 
