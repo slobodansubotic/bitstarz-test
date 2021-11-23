@@ -1,0 +1,63 @@
+.start {
+  height: 40rem;
+  overflow: hidden;
+  background-image: url(../../assets/images/start.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-max($max80) {
+    height: auto;
+  }
+}
+
+.start__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 9.1rem auto;
+  padding: 2rem;
+
+  .button {
+    opacity: 0;
+  }
+
+  &.animated {
+    .start__tagline {
+      animation: textInLeft 600ms ease-in forwards;
+    }
+
+    .start__title {
+      animation: textInLeft 600ms ease-in 300ms forwards;
+    }
+
+    .button {
+      animation: textInBottom 500ms $bounce 600ms forwards;
+    }
+  }
+}
+
+.start__tagline {
+  margin-bottom: 2rem;
+  @include heading-small;
+  text-align: center;
+  color: #ffc700;
+  opacity: 0;
+
+  @include media-max($max80) {
+    font-size: 2rem;
+  }
+}
+
+.start__title {
+  margin-bottom: 4.1rem;
+  @include heading-large;
+  text-align: center;
+  color: $white;
+  opacity: 0;
+
+  @include media-max($max80) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}

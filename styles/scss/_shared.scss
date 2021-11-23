@@ -1,6 +1,8 @@
 .button {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 0;
   padding: 1.6rem 4rem;
   border-radius: 1rem;
   font-weight: 500;
@@ -23,34 +25,34 @@
     line-height: 1.4rem;
   }
 
-  &:link, &:visited, &:hover, &:active {
-    text-decoration: none;
-    color: $white;
+  &.button--small {
+    padding: 1.4rem 3rem;
   }
-}
 
-.button__pulsar {
-  display: block;
-  @include absolute;
-  z-index: -1;
-  border-radius: 1rem;
-  opacity: 0;
+  &.button--big {
+    padding: 1.6rem 5rem;
+  }
 }
 
 .button--primary {
   background-color: $button;
 
+  &::before {
+    content: '';
+    @include absolute;
+    z-index: -1;
+    border-radius: 1rem;
+    opacity: 0;
+    background-color: lighten($button, 6%);
+  }
+
   &:hover {
     background-color: lighten($button, 6%);
 
-    .button__pulsar {
+    &::before {
       animation: pulse 1500ms ease-out infinite;
     }
   }
-}
-
-.button__pulsar--primary {
-  background-color: lighten($button, 6%);
 }
 
 .button--transparent {

@@ -100,3 +100,27 @@
     opacity: 1;
   }
 }
+
+@keyframes menu-open {
+  from {
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: top;
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-close {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+}

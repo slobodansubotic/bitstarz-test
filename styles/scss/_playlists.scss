@@ -1,4 +1,5 @@
 .playlists {
+  overflow: hidden;
   background-color: $white;
 }
 
@@ -97,6 +98,7 @@
   width: 42rem;
   height: 25rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 
   @include media-max($max138) {
     width: 38rem;
