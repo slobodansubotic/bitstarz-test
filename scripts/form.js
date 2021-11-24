@@ -4,9 +4,6 @@ const modalUnderlay = document.querySelector(".modal__underlay");
 const creditCardInput = document.querySelector(".credit-card");
 const inputContainers = [...document.querySelectorAll(".input-animated")];
 const inputs = [...document.querySelectorAll(".input-animated input")];
-const placeholders = [
-  ...document.querySelectorAll(".input-animated__placeholder"),
-];
 const form = document.querySelector(".modal-form__body");
 const startButton = document.querySelector(".start__button");
 
@@ -34,11 +31,21 @@ const openModal = () => {
   }
 };
 
+const clearInputs = () => {
+  inputs.forEach((input) => {
+    input.value = "";
+  });
+  inputContainers.forEach((element) =>
+    element.classList.remove("invalid", "active")
+  );
+};
+
 const closeModal = () => {
   modal.classList.remove("active");
   modal.classList.add("closed");
   modalUnderlay.classList.add("closed");
   unlockScroll();
+  clearInputs();
 };
 
 const validateRequired = (input, index) => {
@@ -47,6 +54,7 @@ const validateRequired = (input, index) => {
     isValid = false;
   } else {
     inputContainers[index].classList.remove("invalid");
+    isValid = true;
   }
 };
 
@@ -111,21 +119,15 @@ const handleCardDateInput = (event) => {
   if (
     !currentValueYear ||
     parseInt(currentValueYear) < 21 ||
-    currentValueYear.length > 2
+    currentValueYear.length > 2 ||
+    !cardDateInput.value
   ) {
     inputContainers[1].classList.add("invalid");
-    isValid = fasle;
+    isValid = false;
   } else {
     inputContainers[1].classList.remove("invalid");
     isValid = true;
   }
-  validateRequired(cardDateInput, 1);
-};
-
-const clearInputs = () => {
-  inputs.forEach((input) => {
-    input.value = "";
-  });
 };
 
 const formatNumber = (element, maxLength) => {
@@ -152,13 +154,11 @@ fullName.oninput = () => {
 
 inputs.forEach((input, index) => {
   input.onfocus = () => {
-    placeholders[index].classList.add("active");
-    input.classList.add("active");
+    inputContainers[index].classList.add("active");
   };
   input.onblur = () => {
     if (!input.value) {
-      placeholders[index].classList.remove("active");
-      input.classList.remove("active");
+      inputContainers[index].classList.remove("active");
     }
   };
 });
@@ -171,6 +171,4 @@ form.onsubmit = (event) => {
   });
 
   isValid && closeModal();
-
-  clearInputs();
 };

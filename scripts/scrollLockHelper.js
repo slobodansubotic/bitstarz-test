@@ -1,5 +1,6 @@
+let scrollPosition = 0;
+
 const lockScroll = () => {
-  let scrollPosition = 0;
   scrollPosition = window.pageYOffset;
   document.body.style.overflow = "hidden";
   document.body.style.position = "fixed";

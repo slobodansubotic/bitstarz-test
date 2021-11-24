@@ -153,7 +153,6 @@
 :root {
   font-size: 10px;
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
 }
 
 * {
@@ -987,7 +986,7 @@ a:link, a:visited, a:hover, a:active {
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  transition: border-radius 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 @media only screen and (max-width: 1379px) {
   .playlists-card__cover {
@@ -1003,6 +1002,8 @@ a:link, a:visited, a:hover, a:active {
 }
 .playlists-card__cover:hover {
   border-radius: 1rem;
+  box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
 }
 
 .playlists-card__cover--1 {
@@ -1344,8 +1345,13 @@ a:link, a:visited, a:hover, a:active {
 .input-animated input[type=number] {
   -moz-appearance: textfield;
 }
-.input-animated input.active {
+.input-animated.active input {
   border: 0.2rem solid #1955ef;
+}
+.input-animated.active .input-animated__placeholder {
+  background: #fff;
+  transform: scale(0.8) translateY(-3.2rem);
+  color: #1955ef;
 }
 .input-animated.invalid input {
   border: 2px solid #EF194C;
@@ -1381,11 +1387,6 @@ a:link, a:visited, a:hover, a:active {
   transform-origin: top left;
   pointer-events: none;
   transition: all 200ms;
-}
-.input-animated__placeholder.active {
-  background: #fff;
-  transform: scale(0.8) translateY(-3.2rem);
-  color: #1955ef;
 }
 
 /*# sourceMappingURL=main.css.map */

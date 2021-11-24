@@ -57,9 +57,17 @@ $cards: ('credit-card', 'visa', 'mastercard');
     &[type="number"] {
       -moz-appearance: textfield;
     }
+  }
 
-    &.active {
+  &.active {
+    input {
       border: 0.2rem solid #1955ef;
+    }
+
+    .input-animated__placeholder {
+      background: #fff;
+      transform: scale(0.8) translateY(-3.2rem);
+      color: #1955ef;
     }
   }
 
@@ -103,10 +111,4 @@ $cards: ('credit-card', 'visa', 'mastercard');
   transform-origin: top left;
   pointer-events: none;
   transition: all 200ms;
-
-  &.active {
-    background: #fff;
-    transform: scale(0.8) translateY(-3.2rem);
-    color: #1955ef;
-  }
 }
