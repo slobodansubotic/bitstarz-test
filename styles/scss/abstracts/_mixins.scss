@@ -4,6 +4,12 @@
   }
 }
 
+@mixin media-max-height($break) {
+  @media only screen and (max-height: $break) {
+    @content;
+  }
+}
+
 @mixin heading-small {
   font-weight: 500;
   font-size: 2.4rem;

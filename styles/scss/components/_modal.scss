@@ -10,6 +10,11 @@
   opacity: 0;
   pointer-events: none;
 
+  @include media-max-height($max48) {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
   &.active {
     pointer-events: all;
     animation: modalUnderlayActive 300ms ease-in forwards;
@@ -66,7 +71,12 @@
 
   @include media-max($max80) {
     width: auto;
+    height: auto;
     margin: 0 2rem;
+  }
+
+  @include media-max-height($max48) {
+    margin-top: 2rem;
   }
 }
 

@@ -1,13 +1,26 @@
 $cards: ('credit-card', 'visa', 'mastercard');
 
+@keyframes iconIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1; 
+  }
+}
+
 @each $card in $cards {
-  .input-animated {
+  .input-animated:not(.invalid) {
     &.#{$card} {
-      &::after {
+      &::before {
         content: url('../../assets/images/#{$card}.svg');
         position: absolute;
         top: 1.6rem;
         right: 2rem;
+        z-index: 1;
+        animation: iconIn 150ms $bounce forwards;
       }
   
       .card-input {
@@ -20,6 +33,35 @@ $cards: ('credit-card', 'visa', 'mastercard');
 .input-animated {
   position: relative;
   display: inline-block;
+
+  input {
+    position: relative;
+    width: 100%;
+    height: 5.6rem;
+    margin-bottom: 2rem;
+    padding: 1.8rem 2rem 1.9rem;
+    border-radius: 1rem;
+    border: 1px solid #c4c9da;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $black;
+    transition: all 150ms ease-in-out;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    &.active {
+      border: 0.2rem solid #1955ef;
+    }
+  }
 
   &.invalid {
     input {
@@ -37,36 +79,11 @@ $cards: ('credit-card', 'visa', 'mastercard');
     &::after {
       content: url('../../assets/images/warning.svg');
       position: absolute;
-      top: 2rem;
-      right: 2rem;
-    }
-  }
-
-  input {
-    position: relative;
-    width: 100%;
-    height: 5.6rem;
-    margin-bottom: 2rem;
-    padding: 1.8rem 2rem 1.9rem;
-    border-radius: 1rem;
-    border: 1px solid #c4c9da;
-    outline: none;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    color: $black;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    &[type="number"] {
-      -moz-appearance: textfield;
-    }
-
-    &.active {
-      border: 0.2rem solid #1955ef;
+      top: 1rem;
+      right: 1rem;
+      padding: 1rem;
+      background-color: $white;
+      animation: iconIn 150ms $bounce forwards;
     }
   }
 }

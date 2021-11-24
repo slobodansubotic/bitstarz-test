@@ -1,4 +1,15 @@
-@import "../scss/variables", "../scss/animations", "../scss/mixins",
-  "../scss/base.scss", "../scss/shared", "../scss/layout", "../scss/navigation",
-  "../scss/hero", "../scss/programs", "../scss/playlists", "../scss/start",
-  "../scss/footer", "../scss/modal", "../scss/input-animated";
+@import
+  "../scss/abstracts/variables",
+  "../scss/abstracts/animations",
+  "../scss/abstracts/mixins",
+  "../scss/base/base.scss",
+  "../scss/components/shared",
+  "../scss/layout/layout",
+  "../scss/layout/navigation",
+  "../scss/components/hero",
+  "../scss/components/programs",
+  "../scss/components/playlists",
+  "../scss/components/start",
+  "../scss/layout/footer",
+  "../scss/components/modal",
+  "../scss/components/input-animated";

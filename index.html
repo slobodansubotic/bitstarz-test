@@ -33,7 +33,7 @@
             </div>
           </div>
 
-          <a href="" class="button button--primary button--small"
+          <a href="#start" class="button button--primary button--small"
             >Get Started Now</a
           >
         </nav>
@@ -47,7 +47,7 @@
               The #1 app fitness & nutrition app
             </h1>
             <div class="hero-content__buttons">
-              <a href="" class="button button--primary">Get Started Now</a>
+              <a href="#start" class="button button--primary">Get Started Now</a>
               <a href="" class="button button--transparent">Learn More</a>
             </div>
           </div>
@@ -245,7 +245,7 @@
           </div>
         </section>
 
-        <section class="start">
+        <section class="start" id="start">
           <div class="start__content">
             <h3 class="start__tagline">Tune up your workouts</h3>
             <h1 class="start__title">Start your training now</h1>
@@ -269,18 +269,18 @@
           <h3 class="modal-form__title">Buy a Subscription</h3>
           <form action="" novalidate class="modal-form__body">
             <div class="input-animated credit-card">
-              <input type="number" maxlength="16" min="0" max="9999" name="card-number" required />
+              <input type="number" name="card-number" required />
               <span class="input-animated__placeholder">Card Number</span>
             </div>
 
             <div class="modal-card__input-row">
               <div class="input-animated">
-                <input type="text" name="expiry-date" required />
+                <input type="text" maxlength='5' name="expiry-date" required />
                 <span class="input-animated__placeholder">Expiry Date (MM/YY)</span>
               </div>
 
               <div class="input-animated">
-                <input type="text" maxlength="3" name="cvv" required />
+                <input type="number" name="cvv" required />
                 <span class="input-animated__placeholder">CVV</span>
               </div>
             </div>
@@ -290,7 +290,7 @@
               <span class="input-animated__placeholder">Full Name</span>
             </div>
 
-            <button type="submit" class="button button--primary">
+            <button type="submit" class="button button--primary fixed-size">
               Pay Now
             </button>
           </form>
@@ -303,7 +303,9 @@
     </div>
 
     <script src="/scripts/gapHelper.js"></script>
+    <script src="/scripts/scrollLockHelper.js"></script>
     <script src="/scripts/observers.js"></script>
+    <script src="/scripts/form.js"></script>
     <script src="/scripts/main.js"></script>
   </body>
 </html>
