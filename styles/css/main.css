@@ -114,6 +114,42 @@
     opacity: 0;
   }
 }
+@keyframes modalUnderlayActive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalUnderlayClosed {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes modalCardIn {
+  from {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, -30deg) scale(1.4);
+  }
+  to {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+  }
+}
+@keyframes modalCardOut {
+  from {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+  }
+  to {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 30deg) scale(0.6);
+  }
+}
 :root {
   font-size: 10px;
   font-family: "Inter", sans-serif;
@@ -956,6 +992,11 @@ a:link, a:visited, a:hover, a:active {
     height: 16.7rem;
   }
 }
+.playlists-card__cover:hover .animated {
+  border-radius: 1rem;
+  transform-origin: center;
+  transform: scale(1);
+}
 .playlists-card__cover .clipped,
 .playlists-card__cover .animated {
   width: 42rem;
@@ -979,6 +1020,8 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 .playlists-card__cover .clipped {
+  position: relative;
+  z-index: 1;
   -webkit-clip-path: path("M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z");
   clip-path: path("M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z");
 }
@@ -998,13 +1041,10 @@ a:link, a:visited, a:hover, a:active {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-clip-path: inset(3rem round 6rem);
-  clip-path: inset(3rem round 6rem);
-  transition: clip-path 150ms ease-in-out;
-}
-.playlists-card__cover .animated:hover {
-  -webkit-clip-path: inset(0 round 1rem);
-  clip-path: inset(0 round 1rem);
+  z-index: 0;
+  transform-origin: center;
+  transform: scale(0.8);
+  transition: transform 150ms ease-in-out, border-radius 150ms ease-in-out;
 }
 
 .playlists-card__cover--1 .clipped,
@@ -1125,14 +1165,68 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .modal {
-  display: none;
   position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  perspective: 100rem;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal.active {
+  pointer-events: all;
+  animation: modalUnderlayActive 300ms ease-in forwards;
+}
+.modal.active .modal__card {
+  animation: modalCardIn 300ms ease-in forwards;
+}
+.modal.closed {
+  pointer-events: none;
+  animation: modalUnderlayClosed 300ms ease-out forwards;
+}
+.modal.closed .modal__card {
+  animation: modalCardOut 300ms ease-in forwards;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__card {
+  position: absolute;
+  width: 72rem;
+  height: 40.3rem;
+  border-radius: 1.6rem;
+  background-color: #fff;
+}
+
+.modal__underlay {
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(11, 10, 52, 0.7);
-  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(2.4rem);
+  backdrop-filter: blur(2.4rem);
+  opacity: 0;
+  pointer-events: none;
+}
+.modal__underlay.active {
+  animation: modalUnderlayActive 300ms ease-in forwards;
+}
+.modal__underlay.closed {
+  animation: modalUnderlayClosed 300ms ease-out forwards;
 }
 
 /*# sourceMappingURL=main.css.map */

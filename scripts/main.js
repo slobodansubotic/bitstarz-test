@@ -32,3 +32,26 @@ menu.onclick = () => {
 
   menuList.classList.toggle("active");
 };
+
+const startButton = document.querySelector(".start__button");
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
+const modalUnderlay = document.querySelector(".modal__underlay");
+
+startButton.onclick = () => {
+  if (!modal.classList.contains("active")) {
+    modal.classList.remove("closed");
+    modal.classList.add("active");
+    modalUnderlay.classList.remove("closed");
+    modalUnderlay.classList.add("active");
+  } else {
+    modal.classList.remove("active");
+    modalUnderlay.classList.remove("active");
+  }
+};
+
+modalOverlay.onclick = () => {
+  modal.classList.remove("active");
+  modal.classList.add("closed");
+  modalUnderlay.classList.add("closed");
+};

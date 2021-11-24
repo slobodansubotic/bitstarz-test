@@ -124,3 +124,43 @@
     opacity: 0;
   }
 }
+
+@keyframes modalUnderlayActive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalUnderlayClosed {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalCardIn {
+  from {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, -30deg) scale(1.4);
+  }
+  to {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+  }
+}
+
+@keyframes modalCardOut {
+  from {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+  }
+  to {
+    transform-origin: left;
+    transform: rotate3d(1, 1, 1, 30deg) scale(0.6);
+  }
+}

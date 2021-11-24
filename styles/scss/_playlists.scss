@@ -110,6 +110,14 @@
     height: 16.7rem;
   }
 
+  &:hover {
+    .animated {
+      border-radius: 1rem;
+      transform-origin: center;
+      transform: scale(1);
+    }
+  }
+
   .clipped,
   .animated {
     width: 42rem;
@@ -130,6 +138,8 @@
   }
 
   .clipped {
+    position: relative;
+    z-index: 1;
     -webkit-clip-path: path(
       "M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z"
     );
@@ -160,14 +170,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-clip-path: inset(3rem round 6rem);
-    clip-path: inset(3rem round 6rem);
-    transition: clip-path 150ms ease-in-out;
-
-    &:hover {
-      -webkit-clip-path: inset(0 round 1rem);
-      clip-path: inset(0 round 1rem);
-    }
+    z-index: 0;
+    transform-origin: center;
+    transform: scale(0.8);
+    transition: transform 150ms ease-in-out, border-radius 150ms ease-in-out;
   }
 }
 
@@ -189,7 +195,7 @@
   opacity: 0;
 
   @include media-max($max48) {
-    font-size: 2.4rem
+    font-size: 2.4rem;
   }
 }
 

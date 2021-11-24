@@ -1,10 +1,64 @@
 .modal {
-  display: none;
   position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  @include flex-center;
+  width: 100%;
+  height: 100%;
+  perspective: 100rem;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+    animation: modalUnderlayActive 300ms ease-in forwards;
+
+    .modal__card {
+      animation: modalCardIn 300ms ease-in forwards;
+    }
+  }
+
+  &.closed {
+    pointer-events: none;
+    animation: modalUnderlayClosed 300ms ease-out forwards;
+
+    .modal__card {
+      animation: modalCardOut 300ms ease-in forwards;
+    }
+  }
+}
+
+.modal__overlay {
+  @include absolute;
+}
+
+.modal__card {
+  position: absolute;
+  width: 72rem;
+  height: 40.3rem;
+  border-radius: 1.6rem;
+  background-color: $white;
+}
+
+.modal__underlay {
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(11, 10, 52, 0.7);
-  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(2.4rem);
+  backdrop-filter: blur(2.4rem);
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    animation: modalUnderlayActive 300ms ease-in forwards;
+  }
+
+  &.closed {
+    animation: modalUnderlayClosed 300ms ease-out forwards;
+  }
 }
