@@ -226,28 +226,19 @@
 
           <div class="playlists__group">
             <div class="playlists__card">
-              <div class="playlists-card__cover playlists-card__cover--1">
-                <div class="clipped"></div>
-                <div class="animated"></div>
-              </div>
+              <div class="playlists-card__cover playlists-card__cover--1"></div>
               <h2 class="playlists-card__title">Full Body Training</h2>
               <p class="playlists-card__note">No Equipment</p>
             </div>
 
             <div class="playlists__card">
-              <div class="playlists-card__cover playlists-card__cover--2">
-                <div class="clipped"></div>
-                <div class="animated"></div>
-              </div>
+              <div class="playlists-card__cover playlists-card__cover--2"></div>
               <h2 class="playlists-card__title">Back, Arms & Chest</h2>
               <p class="playlists-card__note">Equipment: Weights</p>
             </div>
 
             <div class="playlists__card">
-              <div class="playlists-card__cover playlists-card__cover--3">
-                <div class="clipped"></div>
-                <div class="animated"></div>
-              </div>
+              <div class="playlists-card__cover playlists-card__cover--3"></div>
               <h2 class="playlists-card__title">Let’s Train Together</h2>
               <p class="playlists-card__note">No Equipment</p>
             </div>
@@ -258,20 +249,57 @@
           <div class="start__content">
             <h3 class="start__tagline">Tune up your workouts</h3>
             <h1 class="start__title">Start your training now</h1>
-            <div class="button button--primary button--big start__button">Get Started</div>
+            <div class="button button--primary button--big start__button">
+              Get Started
+            </div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
-        © Copyright 2020. GetFit. All Rights Reserved.
+        &copy; Copyright 2020. GetFit. All Rights Reserved.
       </footer>
     </div>
 
     <div class="modal__underlay"></div>
     <div class="modal">
       <div class="modal__overlay"></div>
-      <div class="modal__card"></div>
+      <div class="modal__card">
+        <section class="modal__form">
+          <h3 class="modal-form__title">Buy a Subscription</h3>
+          <form action="" novalidate class="modal-form__body">
+            <div class="input-animated credit-card">
+              <input type="number" maxlength="16" min="0" max="9999" name="card-number" required />
+              <span class="input-animated__placeholder">Card Number</span>
+            </div>
+
+            <div class="modal-card__input-row">
+              <div class="input-animated">
+                <input type="text" name="expiry-date" required />
+                <span class="input-animated__placeholder">Expiry Date (MM/YY)</span>
+              </div>
+
+              <div class="input-animated">
+                <input type="text" maxlength="3" name="cvv" required />
+                <span class="input-animated__placeholder">CVV</span>
+              </div>
+            </div>
+
+            <div class="input-animated">
+              <input type="text" name="full-name" required />
+              <span class="input-animated__placeholder">Full Name</span>
+            </div>
+
+            <button type="submit" class="button button--primary">
+              Pay Now
+            </button>
+          </form>
+        </section>
+
+        <section class="modal__image">
+          <img src="/assets/images/card-front-2.png" alt="buy" />
+        </section>
+      </div>
     </div>
 
     <script src="/scripts/gapHelper.js"></script>

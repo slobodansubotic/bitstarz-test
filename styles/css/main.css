@@ -227,9 +227,11 @@ a:link, a:visited, a:hover, a:active {
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 0;
   padding: 1.6rem 4rem;
+  border: none;
   border-radius: 1rem;
   font-weight: 500;
   font-size: 1.8rem;
@@ -709,10 +711,11 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
   transition: transform 150ms ease-in;
 }
 .programs-card__photo:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .programs-card-text__front {
@@ -977,88 +980,39 @@ a:link, a:visited, a:hover, a:active {
   position: relative;
   width: 42rem;
   height: 25rem;
+  border-radius: 10% 90% 10% 90%/90% 10% 90% 10%;
   margin-bottom: 2rem;
-  cursor: pointer;
-}
-@media only screen and (max-width: 1379px) {
-  .playlists-card__cover {
-    width: 38rem;
-    height: 22.6rem;
-  }
-}
-@media only screen and (max-width: 479px) {
-  .playlists-card__cover {
-    width: 28rem;
-    height: 16.7rem;
-  }
-}
-.playlists-card__cover:hover .animated {
-  border-radius: 1rem;
-  transform-origin: center;
-  transform: scale(1);
-}
-.playlists-card__cover .clipped,
-.playlists-card__cover .animated {
-  width: 42rem;
-  height: 25rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
+  transition: border-radius 150ms ease-in-out;
 }
 @media only screen and (max-width: 1379px) {
-  .playlists-card__cover .clipped,
-.playlists-card__cover .animated {
+  .playlists-card__cover {
     width: 38rem;
     height: 22.6rem;
   }
 }
 @media only screen and (max-width: 479px) {
-  .playlists-card__cover .clipped,
-.playlists-card__cover .animated {
+  .playlists-card__cover {
     width: 28rem;
     height: 16.7rem;
   }
 }
-.playlists-card__cover .clipped {
-  position: relative;
-  z-index: 1;
-  -webkit-clip-path: path("M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z");
-  clip-path: path("M290.045 249.3C223.236 248.1 150.127 245.699 114.022 243.499C57.8142 239.998 25.91 236.598 9.70783 232.397C-0.593546 229.797 0.00653394 231.097 0.00653394 210.493C0.00653394 155.184 4.60715 82.1717 10.6079 43.4652C14.8085 16.0606 19.6091 1.65818 24.9099 0.257943C28.0103 -0.542192 131.324 0.65801 173.43 1.95823C298.446 5.85889 382.257 12.76 410.161 21.5615C414.362 22.8617 418.362 24.6621 419.062 25.5622C420.062 26.7624 420.263 33.3635 419.662 56.7675C417.462 155.084 406.361 231.097 392.059 246.099L388.358 250L345.953 249.8C322.65 249.7 297.446 249.5 290.045 249.3Z");
-}
-@media only screen and (max-width: 1379px) {
-  .playlists-card__cover .clipped {
-    -webkit-clip-path: path("M262.422 225.557C201.975 224.471 135.829 222.299 103.163 220.309C52.3081 217.141 23.4424 214.065 8.78328 210.264C-0.537018 207.912 0.00591167 209.088 0.00591167 190.446C0.00591167 140.405 4.16837 74.3458 9.59762 39.3257C13.3982 14.531 17.7416 1.50026 22.5375 0.233377C25.3427 -0.490555 118.817 0.595342 156.913 1.77173C270.023 5.3009 345.852 11.5448 371.098 19.508C374.899 20.6844 378.518 22.3133 379.151 23.1277C380.056 24.2136 380.238 30.186 379.694 51.3611C377.704 140.314 367.66 209.088 354.72 222.661L351.372 226.191L313.005 226.01C291.921 225.919 269.118 225.738 262.422 225.557Z");
-    clip-path: path("M262.422 225.557C201.975 224.471 135.829 222.299 103.163 220.309C52.3081 217.141 23.4424 214.065 8.78328 210.264C-0.537018 207.912 0.00591167 209.088 0.00591167 190.446C0.00591167 140.405 4.16837 74.3458 9.59762 39.3257C13.3982 14.531 17.7416 1.50026 22.5375 0.233377C25.3427 -0.490555 118.817 0.595342 156.913 1.77173C270.023 5.3009 345.852 11.5448 371.098 19.508C374.899 20.6844 378.518 22.3133 379.151 23.1277C380.056 24.2136 380.238 30.186 379.694 51.3611C377.704 140.314 367.66 209.088 354.72 222.661L351.372 226.191L313.005 226.01C291.921 225.919 269.118 225.738 262.422 225.557Z");
-  }
-}
-@media only screen and (max-width: 479px) {
-  .playlists-card__cover .clipped {
-    -webkit-clip-path: path("M193.363 166.2C148.824 165.4 100.085 163.799 76.0147 162.333C38.5428 159.999 17.2733 157.732 6.47189 154.931C-0.395697 153.198 0.00435596 154.065 0.00435596 140.329C0.00435596 103.456 3.07143 54.7811 7.07193 28.9768C9.87233 10.7071 13.0727 1.10545 16.6066 0.171962C18.6735 -0.361462 87.5493 0.438673 115.62 1.30549C198.964 3.90593 254.838 8.50667 273.441 14.3743C276.241 15.2411 278.908 16.4414 279.375 17.0415C280.041 17.8416 280.175 22.2423 279.775 37.845C278.308 103.389 270.907 154.065 261.373 164.066L258.905 166.667L230.635 166.533C215.1 166.467 198.297 166.333 193.363 166.2Z");
-    clip-path: path("M193.363 166.2C148.824 165.4 100.085 163.799 76.0147 162.333C38.5428 159.999 17.2733 157.732 6.47189 154.931C-0.395697 153.198 0.00435596 154.065 0.00435596 140.329C0.00435596 103.456 3.07143 54.7811 7.07193 28.9768C9.87233 10.7071 13.0727 1.10545 16.6066 0.171962C18.6735 -0.361462 87.5493 0.438673 115.62 1.30549C198.964 3.90593 254.838 8.50667 273.441 14.3743C276.241 15.2411 278.908 16.4414 279.375 17.0415C280.041 17.8416 280.175 22.2423 279.775 37.845C278.308 103.389 270.907 154.065 261.373 164.066L258.905 166.667L230.635 166.533C215.1 166.467 198.297 166.333 193.363 166.2Z");
-  }
-}
-.playlists-card__cover .animated {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transform-origin: center;
-  transform: scale(0.8);
-  transition: transform 150ms ease-in-out, border-radius 150ms ease-in-out;
+.playlists-card__cover:hover {
+  border-radius: 1rem;
 }
 
-.playlists-card__cover--1 .clipped,
-.playlists-card__cover--1 .animated {
+.playlists-card__cover--1 {
   background-image: url("../../assets/images/playlist-cover-1.png");
 }
 
-.playlists-card__cover--2 .clipped,
-.playlists-card__cover--2 .animated {
+.playlists-card__cover--2 {
   background-image: url("../../assets/images/playlist-cover-2.png");
 }
 
-.playlists-card__cover--3 .clipped,
-.playlists-card__cover--3 .animated {
+.playlists-card__cover--3 {
   background-image: url("../../assets/images/playlist-cover-3.png");
 }
 
@@ -1201,14 +1155,6 @@ a:link, a:visited, a:hover, a:active {
   height: 100%;
 }
 
-.modal__card {
-  position: absolute;
-  width: 72rem;
-  height: 40.3rem;
-  border-radius: 1.6rem;
-  background-color: #fff;
-}
-
 .modal__underlay {
   position: fixed;
   z-index: 10;
@@ -1227,6 +1173,186 @@ a:link, a:visited, a:hover, a:active {
 }
 .modal__underlay.closed {
   animation: modalUnderlayClosed 300ms ease-out forwards;
+}
+
+.modal__card {
+  position: absolute;
+  display: flex;
+  width: 72rem;
+  height: 40.3rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+@media only screen and (max-width: 799px) {
+  .modal__card {
+    width: auto;
+    margin: 0 2rem;
+  }
+}
+
+.modal__form {
+  padding: 3rem;
+  flex: 1;
+}
+
+.modal-form__title {
+  margin-bottom: 3rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: #050505;
+}
+@media only screen and (max-width: 479px) {
+  .modal-form__title {
+    font-size: 2rem;
+  }
+}
+
+.modal-form__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.modal-form__body .button {
+  align-self: center;
+  width: 100%;
+}
+
+.modal-card__input-row {
+  display: flex;
+}
+@media only screen and (max-width: 479px) {
+  .modal-card__input-row {
+    display: block;
+  }
+}
+.modal-card__input-row .input-animated:first-child {
+  width: 20rem;
+  margin-right: 1.5rem;
+}
+@media only screen and (max-width: 479px) {
+  .modal-card__input-row .input-animated:first-child {
+    width: 100%;
+  }
+}
+.modal-card__input-row .input-animated:last-child {
+  width: 12rem;
+}
+@media only screen and (max-width: 479px) {
+  .modal-card__input-row .input-animated:last-child {
+    width: 100%;
+  }
+}
+
+.modal__image {
+  flex-shrink: 0;
+  width: 32.5rem;
+}
+@media only screen and (max-width: 799px) {
+  .modal__image {
+    display: none;
+  }
+}
+.modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-animated.credit-card::after {
+  content: url("../../assets/images/credit-card.svg");
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+}
+.input-animated.credit-card .card-input {
+  padding-right: 6rem;
+}
+
+.input-animated.visa::after {
+  content: url("../../assets/images/visa.svg");
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+}
+.input-animated.visa .card-input {
+  padding-right: 6rem;
+}
+
+.input-animated.mastercard::after {
+  content: url("../../assets/images/mastercard.svg");
+  position: absolute;
+  top: 1.6rem;
+  right: 2rem;
+}
+.input-animated.mastercard .card-input {
+  padding-right: 6rem;
+}
+
+.input-animated {
+  position: relative;
+  display: inline-block;
+}
+.input-animated.invalid input {
+  border: 2px solid #EF194C;
+}
+.input-animated.invalid input.active {
+  border: 2px solid #EF194C;
+}
+.input-animated.invalid .input-animated__placeholder {
+  color: #EF194C;
+}
+.input-animated.invalid::after {
+  content: url("../../assets/images/warning.svg");
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.input-animated input {
+  position: relative;
+  width: 100%;
+  height: 5.6rem;
+  margin-bottom: 2rem;
+  padding: 1.8rem 2rem 1.9rem;
+  border-radius: 1rem;
+  border: 1px solid #c4c9da;
+  outline: none;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #050505;
+}
+.input-animated input::-webkit-outer-spin-button, .input-animated input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-animated input[type=number] {
+  -moz-appearance: textfield;
+}
+.input-animated input.active {
+  border: 0.2rem solid #1955ef;
+}
+
+.input-animated__placeholder {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  display: flex;
+  margin: 1.9rem 0;
+  padding: 0 0.4rem;
+  background: none;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #868996;
+  transform-origin: top left;
+  pointer-events: none;
+  transition: all 200ms;
+}
+.input-animated__placeholder.active {
+  background: #fff;
+  transform: scale(0.8) translateY(-3.2rem);
+  color: #1955ef;
 }
 
 /*# sourceMappingURL=main.css.map */

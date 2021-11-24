@@ -1,9 +1,9 @@
 .button {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   position: relative;
   z-index: 0;
   padding: 1.6rem 4rem;
+  border: none;
   border-radius: 1rem;
   font-weight: 500;
   @include small-text;
