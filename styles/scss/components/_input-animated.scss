@@ -41,7 +41,7 @@ $cards: ('credit-card', 'visa', 'mastercard');
     margin-bottom: 2rem;
     padding: 1.8rem 2rem 1.9rem;
     border-radius: 1rem;
-    border: 1px solid #c4c9da;
+    border: 1px solid $input-border;
     outline: none;
     font-size: 1.6rem;
     line-height: 1.9rem;
@@ -61,27 +61,27 @@ $cards: ('credit-card', 'visa', 'mastercard');
 
   &.active {
     input {
-      border: 0.2rem solid #1955ef;
+      border: 0.2rem solid $input-valid;
     }
 
     .input-animated__placeholder {
-      background: #fff;
+      background: $white;
       transform: scale(0.8) translateY(-3.2rem);
-      color: #1955ef;
+      color: $input-valid;
     }
   }
 
   &.invalid {
     input {
-      border: 2px solid #EF194C;
+      border: 2px solid $input-invalid;
 
       &.active {
-        border: 2px solid #EF194C;
+        border: 2px solid $input-invalid;
       }
     }
 
     .input-animated__placeholder {
-      color: #EF194C;
+      color: $input-invalid;
     }
 
     &::after {
@@ -107,7 +107,7 @@ $cards: ('credit-card', 'visa', 'mastercard');
   align-items: center;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: #868996;
+  color: $input-placeholder;
   transform-origin: top left;
   pointer-events: none;
   transition: all 200ms;

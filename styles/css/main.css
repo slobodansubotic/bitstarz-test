@@ -264,7 +264,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .button--primary {
-  background-color: #2E4FFF;
+  background-color: #2e4fff;
 }
 .button--primary::before {
   content: "";
@@ -506,7 +506,7 @@ a:link, a:visited, a:hover, a:active {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.9rem;
-  color: #FF005C;
+  color: #ff005c;
   transform: translateY(2rem);
   opacity: 0;
   animation: textInBottom 300ms ease-in 300ms forwards;
@@ -747,7 +747,7 @@ a:link, a:visited, a:hover, a:active {
 .programs-card-text__front p {
   font-size: 1.8rem;
   line-height: 2.2rem;
-  color: #FFC700;
+  color: #ffc700;
 }
 
 .programs-card__inner--back {
@@ -1038,7 +1038,7 @@ a:link, a:visited, a:hover, a:active {
   font-size: 1.8rem;
   line-height: 2.2rem;
   text-align: center;
-  color: #2E4FFF;
+  color: #2e4fff;
   opacity: 0;
 }
 
@@ -1354,13 +1354,13 @@ a:link, a:visited, a:hover, a:active {
   color: #1955ef;
 }
 .input-animated.invalid input {
-  border: 2px solid #EF194C;
+  border: 2px solid #ef194c;
 }
 .input-animated.invalid input.active {
-  border: 2px solid #EF194C;
+  border: 2px solid #ef194c;
 }
 .input-animated.invalid .input-animated__placeholder {
-  color: #EF194C;
+  color: #ef194c;
 }
 .input-animated.invalid::after {
   content: url("../../assets/images/warning.svg");
