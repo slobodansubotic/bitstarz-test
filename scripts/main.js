@@ -1,5 +1,6 @@
 const infoButtons = [...document.querySelectorAll(".programs-card__info")];
 const closeButtons = [...document.querySelectorAll(".programs-card__close")];
+const playlistCovers = [...document.querySelectorAll(".playlists-card__cover")];
 const cardInnerElements = [
   ...document.querySelectorAll(".programs-card__inner"),
 ];
@@ -29,3 +30,7 @@ menu.onclick = () => {
   }
   menuList.classList.toggle("active");
 };
+
+// Added empty click event on covers so they can react to tap action on mobile devices.
+// Neede for hover animations.
+playlistCovers.forEach((cover) => (cover.onclick = () => {}));
