@@ -10,7 +10,7 @@
   opacity: 0;
   pointer-events: none;
 
-  @include media-max-height($max48) {
+  @include media-max-height($max-xs) {
     align-items: flex-start;
     overflow-y: auto;
   }
@@ -69,13 +69,13 @@
   overflow: hidden;
   background-color: $white;
 
-  @include media-max($max80) {
+  @include media-max($max-s) {
     width: auto;
     height: auto;
     margin: 0 2rem;
   }
 
-  @include media-max-height($max48) {
+  @include media-max-height($max-xs) {
     margin-top: 2rem;
   }
 }
@@ -90,7 +90,7 @@
   @include heading-small;
   color: $black;
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     font-size: 2rem;
   }
 }
@@ -109,7 +109,7 @@
 .modal-card__input-row {
   display: flex;
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     display: block;
   }
 
@@ -118,7 +118,7 @@
       width: 20rem;
       margin-right: 1.5rem;
 
-      @include media-max($max48) {
+      @include media-max($max-xs) {
         width: 100%;
       }
     }
@@ -126,7 +126,7 @@
     &:last-child {
       width: 12rem;
 
-      @include media-max($max48) {
+      @include media-max($max-xs) {
         width: 100%;
       }
     }
@@ -137,7 +137,7 @@
   flex-shrink: 0;
   width: 32.5rem;
 
-  @include media-max($max80) {
+  @include media-max($max-s) {
     display: none;
   }
 

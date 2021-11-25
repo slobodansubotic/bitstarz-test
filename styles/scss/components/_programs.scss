@@ -3,11 +3,11 @@
   padding-bottom: 10rem;
   background: linear-gradient(102.68deg, #112ec5 -0.28%, #d92057 126.51%);
 
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     height: auto;
   }
 
-  @include media-max($max118) {
+  @include media-max($max-l) {
     padding-bottom: 6rem;
   }
 }
@@ -19,11 +19,11 @@
   flex-wrap: wrap;
   margin: 0 15rem 2rem;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     margin: 0 5rem 2rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     gap: 3rem;
     margin: 0 2rem 2rem;
   }
@@ -35,11 +35,11 @@
       margin: 2rem;
     }
 
-    @include media-max($max138) {
+    @include media-max($max-xl) {
       margin: 0 3rem 2rem;
     }
   
-    @include media-max($max48) {
+    @include media-max($max-xs) {
       margin: 0 0 2rem;
     }
   }
@@ -54,12 +54,12 @@
   opacity: 0;
   transform: translateY(10rem);
 
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     width: 32rem;
     height: 38rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     width: 28rem;
     height: 33rem;
   }
@@ -87,13 +87,13 @@
   transform-style: preserve-3d;
   box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.25);
 
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     width: 32rem;
     height: 38rem;
     border-radius: 1.6rem 1.6rem 6.8rem 1.6rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     width: 28rem;
     height: 33rem;
     border-radius: 1.6rem 1.6rem 5.6rem 1.6rem;
@@ -116,12 +116,12 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     width: 32rem;
     height: 38rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     width: 28rem;
     height: 33rem;
   }
@@ -167,7 +167,7 @@
     @include heading-medium;
     color: $white;
 
-    @include media-max($max48) {
+    @include media-max($max-xs) {
       font-size: 2.4rem;
     }
   }
@@ -191,11 +191,11 @@
     @include heading-medium;
     color: $black;
 
-    @include media-max($max168) {
+    @include media-max($max-xxl) {
       margin-bottom: 1rem;
     }
 
-    @include media-max($max48) {
+    @include media-max($max-xs) {
       font-size: 2.4rem;
     }
   }
@@ -206,20 +206,20 @@
     color: $black;
     box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.1);
 
-    @include media-max($max168) {
+    @include media-max($max-xxl) {
       font-size: 1.6rem;
     }
   }
 }
 
 .programs-card-text__back-wrapper {
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     height: 26.6rem;
     overflow-y: auto;
     padding-right: 2rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     height: 23rem;
     overflow-y: auto;
   }
@@ -265,12 +265,12 @@
   opacity: 0;
   transform: translateY(-8rem);
 
-  @include media-max($max118) {
+  @include media-max($max-l) {
     margin: 0 5rem 4rem;
     font-size: 3rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     margin: 0 2rem 4rem;
     font-size: 2.4rem;
   }

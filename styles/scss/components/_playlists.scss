@@ -10,15 +10,15 @@
   color: $black;
   opacity: 0;
 
-  @include media-max($max168) {
+  @include media-max($max-xxl) {
     margin: 15rem 5rem 4rem;
   }
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     text-align: center;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     margin: 8rem 2rem 4rem;
   }
 
@@ -34,7 +34,7 @@
   flex-wrap: wrap;
   margin: 0 5rem 15rem;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     gap: 3rem;
   }
 
@@ -50,7 +50,7 @@
 .playlists__card {
   opacity: 0;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     margin-bottom: 2rem;
   }
 
@@ -105,12 +105,12 @@
   cursor: pointer;
   transition: all 150ms ease-in-out;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     width: 38rem;
     height: 22.6rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     width: 28rem;
     height: 16.7rem;
   }
@@ -136,7 +136,7 @@
   color: $black;
   opacity: 0;
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     font-size: 2.4rem;
   }
 }

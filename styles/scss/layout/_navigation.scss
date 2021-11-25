@@ -4,16 +4,16 @@
   height: 100%;
   margin: 0 15rem;
 
-  @include media-max($max118) {
+  @include media-max($max-l) {
     margin: 0 5rem;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     margin: 0 2rem;
   }
 
   .button {
-    @include media-max($max98) {
+    @include media-max($max-m) {
       display: none;
     }
   }
@@ -24,7 +24,7 @@
 }
 
 .navigation__wrapper {
-  @include media-max($max98) {
+  @include media-max($max-m) {
     position: absolute;
     top: 9rem;
     left: 50%;
@@ -37,12 +37,12 @@
     transform: translateX(-50%);
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     width: calc(100% - 4rem);
   }
 
   &.active {
-    @include media-max($max98) {
+    @include media-max($max-m) {
       opacity: 1;
       pointer-events: all;
     }
@@ -53,7 +53,7 @@
   }
 
   &.closed {
-    @include media-max($max98) {
+    @include media-max($max-m) {
       .navigation__list {
         animation: menu-close 200ms ease-out forwards;
       }
@@ -64,7 +64,7 @@
 .navigation__list {
   display: flex;
 
-  @include media-max($max98) {
+  @include media-max($max-m) {
     display: block;
     width: 100%;
     padding: 2rem;
@@ -85,7 +85,7 @@
   cursor: pointer;
   transition: background-color 150ms ease-in;
 
-  @include media-max($max98) {
+  @include media-max($max-m) {
     margin: 1rem 0;
   }
 
@@ -123,7 +123,7 @@
   transition: 500ms ease-in-out;
   cursor: pointer;
 
-  @include media-max($max98) {
+  @include media-max($max-m) {
     display: block;
   }
 

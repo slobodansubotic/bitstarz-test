@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     height: 57rem;
   }
 }
@@ -14,12 +14,12 @@
 .hero__content {
   margin: 18.5rem 15rem;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     margin: 18.5rem 5rem;
     text-align: center;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     margin: 12rem 2rem;
   }
 }
@@ -32,7 +32,7 @@
   opacity: 0;
   animation: textInBottom 300ms ease-in 300ms forwards;
 
-  @include media-max($max80) {
+  @include media-max($max-s) {
     font-size: 2rem;
   }
 }
@@ -43,7 +43,7 @@
   color: $white;
   animation: textInLeft 600ms ease-in forwards;
 
-  @include media-max($max80) {
+  @include media-max($max-s) {
     font-size: 4rem;
     line-height: 4.8rem;
   }
@@ -54,11 +54,11 @@
   gap: 2rem;
   flex-wrap: wrap;
 
-  @include media-max($max138) {
+  @include media-max($max-xl) {
     justify-content: center;
   }
 
-  @include media-max($max48) {
+  @include media-max($max-xs) {
     gap: 1rem;
   }
 
