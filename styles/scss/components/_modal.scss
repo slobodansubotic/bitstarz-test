@@ -72,7 +72,6 @@
   @include media-max($max-s) {
     width: auto;
     height: auto;
-    margin: 0 2rem;
   }
 
   @include media-max-height($max-xs) {
